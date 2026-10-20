@@ -51,7 +51,7 @@ footer{text-align:center;color:var(--muted);font-size:13px;margin-top:30px}
 footer .back{display:inline-block;margin-top:10px;color:var(--accent);text-decoration:none}
 @media (prefers-reduced-motion:no-preference){
 .art img{animation:bob 3.2s ease-in-out infinite;transform-origin:50% 100%;will-change:transform}
-#shannon .art img{animation:tilt 3.6s ease-in-out infinite}
+#shannon .art img{animation:typing 2.4s steps(1,end) infinite}
 #turing .art img{animation:peek 4s ease-in-out infinite}
 #fourier .art img{animation:sway 3.4s ease-in-out infinite}
 #tesla .art img{animation:buzz 2.6s ease-in-out infinite}
@@ -62,7 +62,7 @@ footer .back{display:inline-block;margin-top:10px;color:var(--accent);text-decor
 .ch.pre{opacity:0;transform:translateY(18px)}
 }
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
-@keyframes tilt{0%,100%{transform:rotate(-1.5deg) translateY(0)}50%{transform:rotate(1.5deg) translateY(-5px)}}
+@keyframes typing{0%,4%,8%,12%,16%,20%,24%,28%,32%,36%,40%,44%,48%{transform:translateY(0) rotate(0)}2%,10%,18%,26%,34%,42%{transform:translateY(2px) rotate(.6deg)}6%,14%,22%,30%,38%,46%{transform:translateY(2px) rotate(-.6deg)}52%,100%{transform:translateY(0) rotate(0)}}
 @keyframes peek{0%,55%,100%{transform:translateX(0) rotate(0)}70%{transform:translateX(6px) rotate(2deg)}85%{transform:translateX(-3px) rotate(-1deg)}}
 @keyframes sway{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg)}}
 @keyframes buzz{0%,88%,100%{transform:translate(0,0)}90%{transform:translate(-2px,1px)}92%{transform:translate(2px,-1px)}94%{transform:translate(-2px,0)}96%{transform:translate(2px,1px)}98%{transform:translate(-1px,-1px)}}
