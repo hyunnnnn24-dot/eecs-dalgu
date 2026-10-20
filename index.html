@@ -53,7 +53,7 @@ footer .back{display:inline-block;margin-top:10px;color:var(--accent);text-decor
 .art img{animation:bob 3.2s ease-in-out infinite;transform-origin:50% 100%;will-change:transform}
 #shannon .art img{animation:typing 2.4s steps(1,end) infinite}
 #turing .art img{animation:peek 3s ease-in-out infinite;transform-origin:50% 90%}
-#fourier .art img{animation:none}#fourier .art .wave{animation:wave 2.2s ease-in-out infinite;transform-origin:50% 30%}
+#fourier .art img{animation:none}#fourier .art .wave{animation:wave 3.6s ease-in-out infinite}
 #tesla .art img{animation:buzz .9s linear infinite}
 #maxwell .art img{animation:royal 4.2s ease-in-out infinite}
 #maxwell .art{animation:glow 4.2s ease-in-out infinite}
@@ -64,7 +64,7 @@ footer .back{display:inline-block;margin-top:10px;color:var(--accent);text-decor
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 @keyframes typing{0%,4%,8%,12%,16%,20%,24%,28%,32%,36%,40%,44%,48%{transform:translateY(0) rotate(0)}2%,10%,18%,26%,34%,42%{transform:translateY(2px) rotate(.6deg)}6%,14%,22%,30%,38%,46%{transform:translateY(2px) rotate(-.6deg)}52%,100%{transform:translateY(0) rotate(0)}}
 @keyframes peek{0%,100%{transform:translateX(-4px) rotate(-3deg)}50%{transform:translateX(10px) rotate(4deg)}}
-@keyframes wave{0%,100%{transform:translateX(-6px) scaleY(1)}25%{transform:translateX(0) scaleY(1.12)}50%{transform:translateX(6px) scaleY(1)}75%{transform:translateX(0) scaleY(.88)}}
+@keyframes wave{0%,100%{transform:translate(-5px,0)}25%{transform:translate(-2px,-2px)}50%{transform:translate(5px,0)}75%{transform:translate(2px,2px)}}
 @keyframes buzz{0%{transform:translate(0,0) rotate(0)}10%{transform:translate(-2px,1px) rotate(-1deg)}20%{transform:translate(2px,-1px) rotate(1deg)}30%{transform:translate(-2px,0) rotate(0)}40%{transform:translate(2px,2px) rotate(1deg)}50%{transform:translate(-1px,-2px) rotate(-1deg)}60%{transform:translate(2px,0) rotate(0)}70%{transform:translate(-2px,1px) rotate(1deg)}80%{transform:translate(1px,-1px) rotate(-1deg)}90%{transform:translate(-1px,2px) rotate(0)}100%{transform:translate(0,0) rotate(0)}}
 @keyframes royal{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-9px) scale(1.02)}}
 @keyframes glow{0%,100%{box-shadow:0 0 0 0 rgba(111,163,255,0)}50%{box-shadow:0 0 36px 6px rgba(111,163,255,.35)}}
