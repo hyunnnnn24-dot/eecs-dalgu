@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="DGIST EECS 달구 갓챠 Season 01 — 전기·전자·컴퓨터공학의 거장 6인 소개">
+<meta property="og:title" content="EECS 달구 갓챠 · Legends of EECS">
+<meta property="og:description" content="DGIST 전기전자컴퓨터공학과 달구가 소개하는 EECS의 거장 6인">
+<meta property="og:image" content="https://hyunnnnn24-dot.github.io/eecs-dalgu/maxwell.png">
+<style>html{color-scheme:light dark}body{margin:0;font-family:system-ui,sans-serif}img{max-width:100%}</style>
+<title>EECS 달구 갓챠</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Jua&display=swap">
+<style>
+/* Layout: one column, one character per screen-ish block, image above, story below */
+:root{
+  --bg:#f5f8ff; --paper:#ffffff; --fg:#0f2b5e; --muted:#4b6396; --accent:#1a56d6; --soft:#dbe9ff; --line:#c9d8f3;
+  --grid:#e6eefb;
+  --display:"Jua","Gowun Dodum","Noto Sans KR",system-ui,sans-serif;
+  --body:"Gowun Dodum","Noto Sans KR",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0b1630;--paper:#132247;--fg:#e8f0ff;--muted:#a9bde6;--accent:#6fa3ff;--soft:#1d3566;--line:#2b4680;--grid:#122042;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0b1630;--paper:#132247;--fg:#e8f0ff;--muted:#a9bde6;--accent:#6fa3ff;--soft:#1d3566;--line:#2b4680;--grid:#122042;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.6;
+ background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:28px 28px}
+.wrap{max-width:560px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 48px}
+header{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+header img{height:20px;width:auto}
+header .sep{width:2px;height:20px;background:var(--line)}
+header b{font-family:var(--display);font-weight:400;font-size:22px;color:var(--accent)}
+.hero{margin:10px 0 26px}
+.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(30px,8vw,40px);line-height:1.15;color:var(--accent);text-wrap:balance;margin:0}
+.hero p{margin:8px 0 0;color:var(--muted);font-size:15px}
+.hero .tag{display:inline-block;margin-top:10px;background:var(--accent);color:#fff;border-radius:999px;padding:3px 12px;font-size:13px;letter-spacing:.04em}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 28px}
+.toc a{text-decoration:none;color:var(--accent);background:var(--soft);border-radius:999px;padding:5px 12px;font-size:14px}
+.toc a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+section.ch{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:22px 18px 20px;margin-bottom:22px;scroll-margin-top:12px}
+.art{display:flex;justify-content:center;background:radial-gradient(circle at 50% 40%,var(--soft),transparent 70%);border-radius:18px;padding:6px}
+.art img{width:min(78%,300px);max-width:100%;height:auto;filter:drop-shadow(0 8px 14px rgba(20,60,140,.18))}
+.nm{margin-top:14px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.nm h2{font-family:var(--display);font-weight:400;font-size:28px;margin:0;color:var(--fg)}
+.nm small{color:var(--muted);font-size:14px}
+.fields{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 12px}
+.fields span{background:var(--accent);color:#fff;font-size:12.5px;border-radius:999px;padding:2px 10px;letter-spacing:.02em}
+.ch p{margin:0 0 10px;font-size:15.5px;max-width:65ch}
+.ch p b{color:var(--accent)}
+.why{border-left:4px solid var(--accent);background:var(--soft);padding:10px 12px;border-radius:0 12px 12px 0;font-size:14.5px}
+.why b{display:block;font-size:12px;letter-spacing:.08em;color:var(--accent);margin-bottom:2px}
+.formula{font-family:"Times New Roman",serif;font-style:italic;color:var(--muted);font-size:15px;margin-top:4px}
+footer{text-align:center;color:var(--muted);font-size:13px;margin-top:30px}
+footer .back{display:inline-block;margin-top:10px;color:var(--accent);text-decoration:none}
+@media (prefers-reduced-motion:no-preference){.art img{transition:transform .25s}.art img:hover{transform:scale(1.03)}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<header><img src="logo.png" alt="DGIST"><span class="sep"></span><b>달구</b><span class="sep"></span><span style="font-size:13px;color:var(--muted);line-height:1.2">Electrical, Electronic and<br>Computer Engineering</span></header>
+
+<div class="hero">
+ <h1>EECS 달구 갓챠<br>Legends of EECS</h1>
+ <p>과학의 생각이 더 나은 세상을 만드는 달구 🐾<br>전기·전자·컴퓨터공학의 역사를 만든 여섯 거장을 달구가 직접 변신해서 소개합니다.</p>
+ <span class="tag">SEASON 01 · 전 6종</span>
+</div>
+
+<nav class="toc">
+ <a href="#faraday">패러데이</a><a href="#shannon">섀넌</a><a href="#turing">튜링</a><a href="#fourier">푸리에</a><a href="#tesla">테슬라</a><a href="#maxwell">맥스웰 👑</a>
+</nav>
+
+<section class="ch" id="faraday">
+ <div class="art"><img src="faraday.png" alt="패러데이 달구"></div>
+ <div class="nm"><h2>패러데이</h2><small>Michael Faraday · 1791–1867 · 영국</small></div>
+ <div class="fields"><span>전기공학</span><span>전기기기</span><span>전자기학</span></div>
+ <p>가난한 대장장이의 아들로 정규 교육을 거의 받지 못했지만, 제본소 견습생으로 일하며 책을 읽다 과학자가 되었습니다. <b>1831년 전자기 유도 법칙</b>을 발견해 "자석을 움직이면 전기가 생긴다"는 사실을 처음 보여줬고, 이것이 발전기·모터·변압기의 원리입니다. 전기장·자기장이라는 "장(field)" 개념도 그가 만들었습니다.</p>
+ <p class="formula">ε = −dΦ/dt</p>
+ <div class="why"><b>왜 뽑았나</b>전기를 "만드는" 방법을 처음 보여준 사람. 발전소부터 전기차 모터까지 전부 패러데이에서 시작합니다.</div>
+</section>
+
+<section class="ch" id="shannon">
+ <div class="art"><img src="shannon.png" alt="섀넌 달구"></div>
+ <div class="nm"><h2>섀넌</h2><small>Claude Shannon · 1916–2001 · 미국</small></div>
+ <div class="fields"><span>정보이론</span><span>통신</span><span>컴퓨터공학</span></div>
+ <p>MIT 석사논문에서 <b>불 대수를 전기회로에 적용</b>해 디지털 논리회로의 기초를 세웠고, <b>1948년 「통신의 수학적 이론」</b>으로 정보이론을 창시했습니다. 비트(bit), 엔트로피, 채널 용량 같은 개념이 여기서 나왔고, 압축·오류정정·무선통신이 모두 이 이론 위에 서 있습니다. 저글링 로봇과 미로 찾는 쥐를 만든 괴짜이기도 합니다.</p>
+ <p class="formula">H = −Σ p(x) log₂ p(x)</p>
+ <div class="why"><b>왜 뽑았나</b>디지털 통신과 컴퓨터의 공통 뿌리. EECS의 "C"를 대표하는 사람입니다.</div>
+</section>
+
+<section class="ch" id="turing">
+ <div class="art"><img src="turing.png" alt="튜링 달구"></div>
+ <div class="nm"><h2>튜링</h2><small>Alan Turing · 1912–1954 · 영국</small></div>
+ <div class="fields"><span>컴퓨터과학</span><span>인공지능</span><span>암호학</span></div>
+ <p><b>1936년 튜링 머신</b>으로 "계산 가능하다"는 것이 무엇인지 수학적으로 정의해 컴퓨터과학의 토대를 놓았습니다. 2차대전 중에는 독일군 암호 <b>에니그마 해독</b>에 핵심 역할을 했고, <b>1950년 논문 「계산 기계와 지능」</b>에서 "기계가 생각할 수 있는가?"를 묻고 튜링 테스트를 제안했습니다. 달구가 칸막이 너머 로봇을 심문하는 장면이 바로 그 테스트입니다.</p>
+ <p class="formula">"Can machines think?"</p>
+ <div class="why"><b>왜 뽑았나</b>컴퓨터과학과 AI의 아버지. 지금 우리가 쓰는 AI의 질문을 75년 전에 먼저 던진 사람입니다.</div>
+</section>
+
+<section class="ch" id="fourier">
+ <div class="art"><img src="fourier.png" alt="푸리에 달구"></div>
+ <div class="nm"><h2>푸리에</h2><small>Joseph Fourier · 1768–1830 · 프랑스</small></div>
+ <div class="fields"><span>신호처리</span><span>통신</span><span>응용수학</span></div>
+ <p>나폴레옹의 이집트 원정에 동행한 수학자이자 행정가였습니다. 열이 전달되는 과정을 연구하다 <b>1822년 「열의 해석적 이론」</b>에서 어떤 복잡한 파형도 단순한 사인파의 합으로 나타낼 수 있다는 <b>푸리에 급수</b>를 발표했습니다. 음성 인식, 이미지 압축(JPEG), 5G 통신(OFDM), MRI까지 신호를 다루는 거의 모든 기술이 푸리에 변환을 씁니다. 온실 효과를 처음 설명한 사람이기도 합니다.</p>
+ <p class="formula">f(x) = Σ cₙ e^{inx}</p>
+ <div class="why"><b>왜 뽑았나</b>신호를 "주파수"로 보는 눈을 준 사람. 신호및시스템부터 통신, 영상처리까지 EECS 과목 어디에나 등장합니다.</div>
+</section>
+
+<section class="ch" id="tesla">
+ <div class="art"><img src="tesla.png" alt="테슬라 달구"></div>
+ <div class="nm"><h2>테슬라</h2><small>Nikola Tesla · 1856–1943 · 세르비아계 미국</small></div>
+ <div class="fields"><span>전력공학</span><span>전기기기</span><span>무선</span></div>
+ <p><b>1888년 교류 유도전동기</b>와 다상 교류 시스템을 발명해, 에디슨의 직류와 벌인 "전류 전쟁"에서 승리했습니다. 오늘날 발전소에서 집까지 전기가 오는 송전망은 테슬라의 설계를 따릅니다. 고주파 변압기인 테슬라 코일, 무선 전력 전송 실험 등으로도 유명하며, 자기장의 단위 T(테슬라)에 이름이 남았습니다.</p>
+ <p class="formula">AC · 3상 교류</p>
+ <div class="why"><b>왜 뽑았나</b>전기를 "보내는" 시스템의 설계자. 패러데이가 만든 전기를 세상 끝까지 보낸 사람입니다.</div>
+</section>
+
+<section class="ch" id="maxwell">
+ <div class="art"><img src="maxwell.png" alt="맥스웰 달구 킹 버전"></div>
+ <div class="nm"><h2>맥스웰 👑</h2><small>James Clerk Maxwell · 1831–1879 · 영국(스코틀랜드)</small></div>
+ <div class="fields"><span>전자기학</span><span>무선통신</span><span>광학</span><span>King of EECS</span></div>
+ <p>패러데이의 실험을 수학으로 옮겨 <b>1865년 맥스웰 방정식 4개</b>로 전기와 자기를 하나로 통합했습니다. 그 과정에서 전자기파의 존재를 예측하고 그 속도가 빛의 속도와 같다는 것을 계산해, <b>빛이 곧 전자기파</b>임을 밝혔습니다. 라디오, 와이파이, 안테나, 광통신, 레이더가 전부 이 방정식에서 나왔습니다. 아인슈타인은 맥스웰을 뉴턴과 같은 급으로 꼽았습니다.</p>
+ <p class="formula">∇·E = ρ/ε₀ &nbsp; ∇·B = 0 &nbsp; ∇×E = −∂B/∂t &nbsp; ∇×B = μ₀J + μ₀ε₀∂E/∂t</p>
+ <div class="why"><b>왜 왕인가</b>전기·전자·통신·광학이 전부 맥스웰 방정식 위에 서 있습니다. 이견 없는 EECS의 왕이라 왕관과 홀을 들고, 망토 안감에는 방정식 4개를 금색 자수로 새겼습니다.</div>
+</section>
+
+<footer>DGIST 전기전자컴퓨터공학과 · 달구 랩코트 클럽 · 2026<br><a class="back" href="#top">↑ 맨 위로</a></footer>
+</div>
+
+</body>
+</html>
