@@ -49,7 +49,25 @@ section.ch{background:var(--paper);border:1px solid var(--line);border-radius:22
 .formula{font-family:"Times New Roman",serif;font-style:italic;color:var(--muted);font-size:15px;margin-top:4px}
 footer{text-align:center;color:var(--muted);font-size:13px;margin-top:30px}
 footer .back{display:inline-block;margin-top:10px;color:var(--accent);text-decoration:none}
-@media (prefers-reduced-motion:no-preference){.art img{transition:transform .25s}.art img:hover{transform:scale(1.03)}}
+@media (prefers-reduced-motion:no-preference){
+.art img{animation:bob 3.2s ease-in-out infinite;transform-origin:50% 100%;will-change:transform}
+#shannon .art img{animation:tilt 3.6s ease-in-out infinite}
+#turing .art img{animation:peek 4s ease-in-out infinite}
+#fourier .art img{animation:sway 3.4s ease-in-out infinite}
+#tesla .art img{animation:buzz 2.6s ease-in-out infinite}
+#maxwell .art img{animation:royal 4.2s ease-in-out infinite}
+#maxwell .art{animation:glow 4.2s ease-in-out infinite}
+.art img:active{animation-play-state:paused;transform:scale(.96)}
+.ch{opacity:1;transform:none;transition:opacity .5s ease,transform .5s ease}
+.ch.pre{opacity:0;transform:translateY(18px)}
+}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes tilt{0%,100%{transform:rotate(-1.5deg) translateY(0)}50%{transform:rotate(1.5deg) translateY(-5px)}}
+@keyframes peek{0%,55%,100%{transform:translateX(0) rotate(0)}70%{transform:translateX(6px) rotate(2deg)}85%{transform:translateX(-3px) rotate(-1deg)}}
+@keyframes sway{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg)}}
+@keyframes buzz{0%,88%,100%{transform:translate(0,0)}90%{transform:translate(-2px,1px)}92%{transform:translate(2px,-1px)}94%{transform:translate(-2px,0)}96%{transform:translate(2px,1px)}98%{transform:translate(-1px,-1px)}}
+@keyframes royal{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-9px) scale(1.02)}}
+@keyframes glow{0%,100%{box-shadow:0 0 0 0 rgba(111,163,255,0)}50%{box-shadow:0 0 36px 6px rgba(111,163,255,.35)}}
 </style>
 </head>
 <body>
@@ -124,5 +142,13 @@ footer .back{display:inline-block;margin-top:10px;color:var(--accent);text-decor
 <footer>DGIST 전기전자컴퓨터공학과 · 달구 랩코트 클럽 · 2026<br><a class="back" href="#top">↑ 맨 위로</a></footer>
 </div>
 
+<script>
+if(matchMedia('(prefers-reduced-motion: no-preference)').matches&&'IntersectionObserver' in window){
+  const secs=[...document.querySelectorAll('section.ch')];
+  secs.forEach((el,i)=>{const r=el.getBoundingClientRect(); if(r.top>innerHeight)el.classList.add('pre');});
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.remove('pre');io.unobserve(e.target);}}),{threshold:.15});
+  secs.forEach(el=>io.observe(el));
+}
+</script>
 </body>
 </html>
