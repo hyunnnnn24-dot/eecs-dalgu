@@ -36,7 +36,7 @@ header b{font-family:var(--display);font-weight:400;font-size:22px;color:var(--a
 .toc a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 section.ch{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:22px 18px 20px;margin-bottom:22px;scroll-margin-top:12px}
 .art{display:flex;justify-content:center;background:radial-gradient(circle at 50% 40%,var(--soft),transparent 70%);border-radius:18px;padding:6px}
-.art img{width:min(78%,300px);max-width:100%;height:auto;filter:drop-shadow(0 8px 14px rgba(20,60,140,.18))}
+.art img{width:min(78%,300px);max-width:100%;height:auto;}.stack{position:relative;width:min(78%,300px)}.stack img{width:100%;position:absolute;inset:0;filter:none}.stack img:last-child{position:relative}.stack{filter:drop-shadow(0 8px 14px rgba(20,60,140,.18))}
 .nm{margin-top:14px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
 .nm h2{font-family:var(--display);font-weight:400;font-size:28px;margin:0;color:var(--fg)}
 .nm small{color:var(--muted);font-size:14px}
@@ -53,7 +53,7 @@ footer .back{display:inline-block;margin-top:10px;color:var(--accent);text-decor
 .art img{animation:bob 3.2s ease-in-out infinite;transform-origin:50% 100%;will-change:transform}
 #shannon .art img{animation:typing 2.4s steps(1,end) infinite}
 #turing .art img{animation:peek 3s ease-in-out infinite;transform-origin:50% 90%}
-#fourier .art img{animation:sway 2.8s ease-in-out infinite;transform-origin:50% 100%}
+#fourier .art img{animation:none}#fourier .art .wave{animation:wave 2.2s ease-in-out infinite;transform-origin:50% 30%}
 #tesla .art img{animation:buzz .9s linear infinite}
 #maxwell .art img{animation:royal 4.2s ease-in-out infinite}
 #maxwell .art{animation:glow 4.2s ease-in-out infinite}
@@ -64,7 +64,7 @@ footer .back{display:inline-block;margin-top:10px;color:var(--accent);text-decor
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 @keyframes typing{0%,4%,8%,12%,16%,20%,24%,28%,32%,36%,40%,44%,48%{transform:translateY(0) rotate(0)}2%,10%,18%,26%,34%,42%{transform:translateY(2px) rotate(.6deg)}6%,14%,22%,30%,38%,46%{transform:translateY(2px) rotate(-.6deg)}52%,100%{transform:translateY(0) rotate(0)}}
 @keyframes peek{0%,100%{transform:translateX(-4px) rotate(-3deg)}50%{transform:translateX(10px) rotate(4deg)}}
-@keyframes sway{0%,100%{transform:rotate(-4deg) translateY(0)}25%{transform:rotate(0) translateY(-4px)}50%{transform:rotate(4deg) translateY(0)}75%{transform:rotate(0) translateY(-4px)}}
+@keyframes wave{0%,100%{transform:translateX(-6px) scaleY(1)}25%{transform:translateX(0) scaleY(1.12)}50%{transform:translateX(6px) scaleY(1)}75%{transform:translateX(0) scaleY(.88)}}
 @keyframes buzz{0%{transform:translate(0,0) rotate(0)}10%{transform:translate(-2px,1px) rotate(-1deg)}20%{transform:translate(2px,-1px) rotate(1deg)}30%{transform:translate(-2px,0) rotate(0)}40%{transform:translate(2px,2px) rotate(1deg)}50%{transform:translate(-1px,-2px) rotate(-1deg)}60%{transform:translate(2px,0) rotate(0)}70%{transform:translate(-2px,1px) rotate(1deg)}80%{transform:translate(1px,-1px) rotate(-1deg)}90%{transform:translate(-1px,2px) rotate(0)}100%{transform:translate(0,0) rotate(0)}}
 @keyframes royal{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-9px) scale(1.02)}}
 @keyframes glow{0%,100%{box-shadow:0 0 0 0 rgba(111,163,255,0)}50%{box-shadow:0 0 36px 6px rgba(111,163,255,.35)}}
@@ -113,7 +113,7 @@ footer .back{display:inline-block;margin-top:10px;color:var(--accent);text-decor
 </section>
 
 <section class="ch" id="fourier">
- <div class="art"><img src="fourier.png" alt="푸리에 달구"></div>
+ <div class="art"><div class="stack"><img src="fourier_bg.png" alt=""><img class="wave" src="fourier_wave.png" alt=""><img src="fourier_base.png" alt="푸리에 달구"></div></div>
  <div class="nm"><h2>푸리에</h2><small>Joseph Fourier · 1768–1830 · 프랑스</small></div>
  <div class="fields"><span>신호처리</span><span>통신</span><span>응용수학</span></div>
  <p>나폴레옹의 이집트 원정에 동행한 수학자이자 행정가였습니다. 열이 전달되는 과정을 연구하다 <b>1822년 「열의 해석적 이론」</b>에서 어떤 복잡한 파형도 단순한 사인파의 합으로 나타낼 수 있다는 <b>푸리에 급수</b>를 발표했습니다. 음성 인식, 이미지 압축(JPEG), 5G 통신(OFDM), MRI까지 신호를 다루는 거의 모든 기술이 푸리에 변환을 씁니다. 온실 효과를 처음 설명한 사람이기도 합니다.</p>
